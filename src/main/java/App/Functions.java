@@ -1,14 +1,15 @@
 package App;
 
 import java.io.*;
+import com.opencsv.CSVReader;
 
-public class Functions {
-    public static void showError(String $msg){
+public class Functions extends Variables {
+    public static void showError(String msg){
         String app_env = getEnv("APP_ENV");
         if (app_env != null && app_env.equals("production")) {
             System.out.println("Something went wrong, please try again later or contact the support team.");
         } else {
-            System.out.println($msg);
+            System.out.println(msg);
         }
     }
 
@@ -32,18 +33,5 @@ public class Functions {
         }
         return null;
     }
-    public static String[] search(String $name){
-        try {
-            String database = getEnv("DATABASE");
-            assert database != null;
-            BufferedReader reader = new BufferedReader(new FileReader(database));
-            String line;
-            while ((line = reader.readLine()) != null) {
-                return line.split(",");
-            }
-        } catch (Exception e) {
-            showError(e.getMessage());
-        }
-        return new String[]{};
-    }
+
 }
