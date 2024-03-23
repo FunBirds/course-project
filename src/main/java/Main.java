@@ -1,20 +1,31 @@
 import App.DB;
+import App.Functions;
 
-import static java.lang.Thread.sleep;
+import java.io.*;
 import java.util.*;
+
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        System.out.println("Hello! Welcome to the Warhouse App");
-        System.out.println("We are making a connection to the database... please be patient");
-        Thread.sleep(2000);
-        System.out.println("Done! Connection established");
-        System.out.println("This app made by Abdullajonov Boburjon! Type \"/help\" to see all aviable comand");
-//      # Listen the console xD
-        while (true) {
-            Scanner scanner = new Scanner(System.in);
-            String command = scanner.nextLine();
-            if (command.equals("/help")) {
-                System.out.println("Wassup bro! Here is the list of all aviable commands");
+        Functions.helloMsg();
+
+        // Listen CMD
+        while(true){
+            Scanner scan = new Scanner(System.in);
+            String command = scan.nextLine();
+            // need to read the steps.txt file to know the last step
+            String lastStep = String.valueOf(Functions.readSteps());
+
+            if (command.equals("/exit")) {
+                Functions.bye();
+                System.exit(0);
+            } else if (command.equals("/search")) {
+                System.out.println("What are you looking for?");
+                Functions.writeSteps("search");
+            } else {
+                Functions.showError("OOPS...Command not found, try again!");
+            }
+            if (scan.hasNext() && lastStep.equals("search")) {
+                System.out.println("It's working!");
             }
         }
     }
