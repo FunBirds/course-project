@@ -9,12 +9,15 @@ public class DB extends Variables {
             CSVReader reader = new CSVReader(new FileReader(database));
 
             List<String[]> data = reader.readAll();
-
+            if (data.isEmpty()) {
+                System.out.println("OOPS...No products found!");
+                return;
+            }
             // Print header
-            System.out.println("Inventory Data:");
+            System.out.println("All products:");
             String[] header = data.get(0);
             for (String field : header) {
-                System.out.print(field + ",");
+                System.out.printf("%-15s", field);
             }
             System.out.println();
 
@@ -22,7 +25,7 @@ public class DB extends Variables {
             for (int i = 1; i < data.size(); i++) {
                 String[] row = data.get(i);
                 for (String value : row) {
-                    System.out.print(value + ",");
+                    System.out.printf("%-15s",value);
                 }
                 System.out.println();
             }
