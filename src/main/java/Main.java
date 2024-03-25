@@ -38,10 +38,8 @@ public class Main {
             }
 
             // TODO: check if command has in available commands list && Search items and show it
-            if (lastStep.equals("search") && scan.hasNext()) {
-                String name = scan.nextLine();
-                System.out.println(name);
-                ProductController.search(name);
+            if (lastStep.equals("search")) {
+                ProductController.search(command);
                 Functions.writeSteps("");
             }
         }
