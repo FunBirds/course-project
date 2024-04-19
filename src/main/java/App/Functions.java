@@ -29,7 +29,7 @@ public class Functions extends Variables {
             }
             reader.close();
         } catch (IOException e) {
-            return e.getMessage();
+            showError(e.getMessage());
         }
         return null;
     }
@@ -37,20 +37,11 @@ public class Functions extends Variables {
 
     // in this function we write a step for user.
     public static void writeSteps(String step){
-      try{
-        File file = new File("./src/main/java/Database/steps.txt");
-        if(!file.exists()) {
-          file.createNewFile();
-        } else {
-            file.delete();
-            file.createNewFile();
+        try (FileWriter writer = new FileWriter("./src/main/java/Database/steps.txt")) {
+            writer.write(step);
+        } catch (IOException e) {
+            showError(e.getMessage());
         }
-        FileWriter writer = new FileWriter(file);
-        writer.write(step);
-        writer.close();
-      }catch(IOException e){
-        showError(e.getMessage());
-      }
     }
 
     public static StringBuilder readSteps(){
@@ -68,6 +59,7 @@ public class Functions extends Variables {
         }
         return null;
     }
+
     public static void helloMsg() throws InterruptedException {
         System.out.println("Hello! Welcome to the Warhouse search App");
         System.out.println("We are making a connection to the database... please be patient");
@@ -77,6 +69,7 @@ public class Functions extends Variables {
         System.out.println("Done! Connection established");
         System.out.println("This app made by Abdullajonov Boburjon! Type \"/help\" to see all aviable comand");
     }
+
     public static void bye(){
         System.out.println("Goodbye! Have a nice day!");
     }
