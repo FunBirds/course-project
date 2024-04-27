@@ -1,4 +1,4 @@
-package exceptions;
+package Exceptions;
 
 public class DaoException extends Exception {
     public DaoException(String message) {

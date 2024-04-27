@@ -1,9 +1,6 @@
 package Dao;
 
-import Dao.searchcreteria.AbstractDao;
 import EntityLayer.Cup;
-
-import java.util.List;
 
 public class CupDao extends AbstractDao<Cup> {
 

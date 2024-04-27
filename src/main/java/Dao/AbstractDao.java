@@ -1,8 +1,8 @@
-package Dao.searchcreteria;
+package Dao;
 
-import Dao.TablewareDao;
+import Dao.searchcriteria.SearchCriteria;
 import EntityLayer.Tableware;
-import exceptions.DaoException;
+import Exceptions.DaoException;
 
 import java.io.BufferedReader;
 import java.io.IOException;

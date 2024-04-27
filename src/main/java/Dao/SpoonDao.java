@@ -1,6 +1,5 @@
 package Dao;
 
-import Dao.searchcreteria.AbstractDao;
 import EntityLayer.Spoon;
 
 public class SpoonDao extends AbstractDao<Spoon> {

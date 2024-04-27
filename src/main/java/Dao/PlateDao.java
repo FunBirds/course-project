@@ -1,6 +1,5 @@
 package Dao;
 
-import Dao.searchcreteria.AbstractDao;
 import EntityLayer.Plate;
 
 public class PlateDao extends AbstractDao<Plate> {

@@ -1,6 +1,5 @@
 package Dao;
 
-import Dao.searchcreteria.AbstractDao;
 import EntityLayer.Pot;
 
 public class PotDao extends AbstractDao<Pot> {
