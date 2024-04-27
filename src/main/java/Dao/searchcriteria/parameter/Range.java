@@ -1,4 +1,4 @@
-package Dao.searchcreteria.parameter;
+package Dao.searchcriteria.parameter;
 
 import java.util.Objects;
 
