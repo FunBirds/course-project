@@ -2,13 +2,13 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.example</groupId>
-  <artifactId>CouseProject</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <groupId>uz.itpu</groupId>
+  <artifactId>tableware-household-goods</artifactId>
+  <version>0.1-ALFA</version>
   <packaging>jar</packaging>
 
-  <name>Course Project</name>
-  <url>http://maven.apache.org</url>
+  <name>Tableware and Household Goods</name>
+  <url>https://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,13 +21,10 @@
       <version>5.9.2</version>
       <scope>test</scope>
     </dependency>
-
     <dependency>
       <groupId>com.opencsv</groupId>
       <artifactId>opencsv</artifactId>
       <version>5.9</version>
     </dependency>
-
-
   </dependencies>
 </project>
