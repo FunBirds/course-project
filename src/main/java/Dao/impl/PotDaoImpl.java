@@ -9,7 +9,7 @@ import java.io.FileReader;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class PotDaoImpl implements PotDao {
+public class PotDaoImpl{
     private String path = "resources/pot.csv";
     /**
      * List of plates
@@ -26,21 +26,21 @@ public class PotDaoImpl implements PotDao {
     /*
       Read the cvs file
      */
-    @Override
-    public List<Pot> all() {
-        try {
-            pots = new BufferedReader(new FileReader(path))
-                    .lines()
-                    .skip(1)
-                    .map(e -> createCup(e.split(DELIMITER)))
-                    .collect(Collectors.toList());
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException("File not found");
-        }
-        return pots;
-    }
+//    @Override
+//    public List<Pot> all() {
+//        try {
+//            pots = new BufferedReader(new FileReader(path))
+//                    .lines()
+//                    .skip(1)
+//                    .map(e -> createPot(e.split(DELIMITER)))
+//                    .collect(Collectors.toList());
+//        } catch (FileNotFoundException e) {
+//            throw new RuntimeException("File not found");
+//        }
+//        return pots;
+//    }
 
-    private Pot createCup(String[] product) {
+    private Pot createPot(String[] product) {
         return new Pot()
                 .setName(product[0])
                 .setPrice(Double.parseDouble(product[1]))

@@ -9,7 +9,7 @@ import java.io.FileReader;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class PlateDaoImpl implements PlateDao {
+public class PlateDaoImpl {
     private String path = "resources/plate.csv";
     /**
      * List of plates
@@ -26,21 +26,8 @@ public class PlateDaoImpl implements PlateDao {
     /*
       Read the cvs file
      */
-    @Override
-    public List<Plate> all() {
-        try {
-            plates = new BufferedReader(new FileReader(path))
-                    .lines()
-                    .skip(1)
-                    .map(e -> createCup(e.split(DELIMITER)))
-                    .collect(Collectors.toList());
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException("File not found");
-        }
-        return plates;
-    }
 
-    private Plate createCup(String[] product) {
+    private Plate createPlate(String[] product) {
         return new Plate()
                 .setName(product[0])
                 .setPrice(Double.parseDouble(product[1]))

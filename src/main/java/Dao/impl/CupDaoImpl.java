@@ -7,7 +7,7 @@ import java.util.*;
 import java.io.*;
 import java.util.stream.Collectors;
 
-public class CupDaoImpl implements CupDao {
+public class CupDaoImpl {
     private String path = "resources/cup.csv";
     /**
      * List of cups
@@ -24,19 +24,19 @@ public class CupDaoImpl implements CupDao {
     /*
       Read the cvs file
      */
-    @Override
-    public List<Cup> all() {
-        try {
-            cups = new BufferedReader(new FileReader(path))
-                    .lines()
-                    .skip(1)
-                    .map(e -> createCup(e.split(DELIMITER)))
-                    .collect(Collectors.toList());
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException("File not found");
-        }
-        return cups;
-    }
+//    @Override
+//    public List<Cup> all() {
+//        try {
+//            cups = new BufferedReader(new FileReader(path))
+//                    .lines()
+//                    .skip(1)
+//                    .map(e -> createCup(e.split(DELIMITER)))
+//                    .collect(Collectors.toList());
+//        } catch (FileNotFoundException e) {
+//            throw new RuntimeException("File not found");
+//        }
+//        return cups;
+//    }
 
     private Cup createCup(String[] product) {
         return new Cup()
