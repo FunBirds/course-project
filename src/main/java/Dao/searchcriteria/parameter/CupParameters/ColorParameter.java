@@ -1,6 +1,6 @@
-package Dao.searchcreteria.parameter;
+package Dao.searchcriteria.parameter.CupParameters;
 
-import Dao.searchcreteria.Parameter;
+import Dao.searchcriteria.Parameter;
 import EntityLayer.Cup;
 
 public record ColorParameter(String color) implements Parameter<Cup> {

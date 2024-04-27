@@ -1,4 +1,4 @@
-package Dao.searchcreteria;
+package Dao.searchcriteria;
 
 import EntityLayer.Tableware;
 

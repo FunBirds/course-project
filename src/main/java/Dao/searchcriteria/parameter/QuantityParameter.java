@@ -1,6 +1,6 @@
-package Dao.searchcreteria.parameter;
+package Dao.searchcriteria.parameter;
 
-import Dao.searchcreteria.Parameter;
+import Dao.searchcriteria.Parameter;
 import EntityLayer.Tableware;
 
 public record QuantityParameter <A extends Tableware<A>>(Range<Integer> range) implements Parameter<A> {

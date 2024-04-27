@@ -1,6 +1,6 @@
 package Service;
 
-import Dao.searchcreteria.SearchCriteria;
+import Dao.searchcriteria.SearchCriteria;
 import EntityLayer.Tableware;
 
 import java.util.Collection;

@@ -1,8 +1,7 @@
-package Dao.searchcreteria.parameter;
+package Dao.searchcriteria.parameter.CupParameters;
 
-import Dao.searchcreteria.Parameter;
+import Dao.searchcriteria.Parameter;
 import EntityLayer.Cup;
-import EntityLayer.Tableware;
 
 public record SizeParameter(String size) implements Parameter<Cup>{
 

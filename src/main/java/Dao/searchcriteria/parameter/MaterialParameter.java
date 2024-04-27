@@ -1,6 +1,6 @@
-package Dao.searchcreteria.parameter;
+package Dao.searchcriteria.parameter;
 
-import Dao.searchcreteria.Parameter;
+import Dao.searchcriteria.Parameter;
 import EntityLayer.Tableware;
 
 public record MaterialParameter<A extends Tableware<A>>(String material) implements Parameter<A> {
