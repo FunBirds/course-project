@@ -34,3 +34,4 @@ steps.txt
 ./src/main/java/Database/steps.txt
 target
 ./target
+*.class
