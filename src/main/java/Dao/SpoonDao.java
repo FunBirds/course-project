@@ -4,7 +4,7 @@ import EntityLayer.Spoon;
 
 public class SpoonDao extends AbstractDao<Spoon> {
     public SpoonDao() {
-        super("resources/spoon.csv");
+        super("spoon.csv");
     }
 
     @Override

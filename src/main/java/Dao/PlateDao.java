@@ -4,7 +4,7 @@ import EntityLayer.Plate;
 
 public class PlateDao extends AbstractDao<Plate> {
     public PlateDao() {
-        super("resources/plate.csv");
+        super("plate.csv");
     }
 
     @Override

@@ -4,7 +4,7 @@ import EntityLayer.Pot;
 
 public class PotDao extends AbstractDao<Pot> {
         public PotDao() {
-            super("resources/pot.csv");
+            super("pot.csv");
         }
 
         @Override
