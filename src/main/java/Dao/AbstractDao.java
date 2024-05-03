@@ -49,5 +49,23 @@ public abstract class AbstractDao<A extends Tableware<A>> implements TablewareDa
             throw new DaoException(e.getMessage());
         }
     }
+
+    @Override
+    public List<A> findAll() throws DaoException {
+        try (BufferedReader in = Files.newBufferedReader(csvPath)){
+            in.readLine();
+            String line;
+            List<A> appliances = new ArrayList<>();
+            while ((line = in.readLine()) != null) {
+                String[] split = line.split(",");
+                A appliance = parse(split);
+                appliances.add(appliance);
+            }
+            return appliances;
+        } catch (IOException e) {
+            throw new DaoException(e.getMessage());
+        }
+    }
+
     protected abstract A parse(String[] csvLine) throws DaoException;
 }
