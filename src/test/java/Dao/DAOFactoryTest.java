@@ -2,12 +2,11 @@ package Dao;
 
 import EntityLayer.Cup;
 import EntityLayer.Tableware;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DAOFactoryTest {
-
     @Test
     public void shouldReturnNullWhenUnknownClassIsPassed() {
         class DummyAppliance extends Tableware<DummyAppliance> {}
