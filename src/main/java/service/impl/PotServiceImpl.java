@@ -19,7 +19,7 @@ public class PotServiceImpl implements PotService {
     TablewareDao<Pot> dao = DaoFactory.INSTANCE.getTablewareDAO(Pot.class);
     PotSearchCriteria criteria = new PotSearchCriteria();
 
-    public static List<Spoon> getAll() throws ServiceException {
+    public List<Spoon> getAll() throws ServiceException {
         try {
             TablewareDao<Spoon> dao = DaoFactory.INSTANCE.getTablewareDAO(Spoon.class);
             return Objects.requireNonNull(dao).findAll();

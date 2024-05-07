@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 
 public class CupServiceImpl implements CupService {
-    private List<Cup> cups;
+    private  List<Cup> cups;
     TablewareDao<Cup> dao = DaoFactory.INSTANCE.getTablewareDAO(Cup.class);
     CupSearchCriteria criteria = new CupSearchCriteria();
 
@@ -23,7 +23,7 @@ public class CupServiceImpl implements CupService {
      * @return List<Cup>
      * @throws ServiceException - if error occurs while getting all cups
      */
-    public static List<Cup> getAll() throws ServiceException {
+    public List<Cup> getAll() throws ServiceException {
         try {
             TablewareDao<Cup> dao = DaoFactory.INSTANCE.getTablewareDAO(Cup.class);
             return Objects.requireNonNull(dao).findAll();

@@ -17,7 +17,7 @@ public class SpoonServiceImpl implements SpoonService {
     TablewareDao<Spoon> dao = DaoFactory.INSTANCE.getTablewareDAO(Spoon.class);
     SpoonSearchCriteria criteria = new SpoonSearchCriteria();
 
-    public static List<Spoon> getAll() throws ServiceException {
+    public List<Spoon> getAll() throws ServiceException {
         try {
             TablewareDao<Spoon> dao = DaoFactory.INSTANCE.getTablewareDAO(Spoon.class);
             return Objects.requireNonNull(dao).findAll();

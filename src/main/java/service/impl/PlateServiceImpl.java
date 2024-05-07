@@ -18,7 +18,7 @@ public class PlateServiceImpl implements PlateService {
     TablewareDao<Plate> dao = DaoFactory.INSTANCE.getTablewareDAO(Plate.class);
     PlateSearchCriteria criteria = new PlateSearchCriteria();
 
-    public static List<Plate> getAll() throws ServiceException {
+    public List<Plate> getAll() throws ServiceException {
         try {
             TablewareDao<Plate> dao = DaoFactory.INSTANCE.getTablewareDAO(Plate.class);
             return Objects.requireNonNull(dao).findAll();
