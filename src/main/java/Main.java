@@ -1,16 +1,6 @@
-import Dao.CupDao;
-import Dao.DaoFactory;
-import Dao.TablewareDao;
-import Dao.searchcriteria.Cup.CupSearchCriteria;
-import Dao.searchcriteria.SearchCriteria;
-import Dao.searchcriteria.parameter.CupParameters.ColorParameter;
-import Dao.searchcriteria.parameter.NameParameter;
-import EntityLayer.Cup;
-import Exceptions.DaoException;
-import Exceptions.ServiceException;
-import Service.impl.CupServiceImpl;
-
-import java.util.Objects;
+import dao.DaoException;
+import service.ServiceException;
+import service.impl.CupServiceImpl;
 
 public class Main {
     public static void main(String[] args) throws DaoException, ServiceException {
