@@ -1,6 +1,7 @@
-package ui;
+package ui.impl;
 
 import io.github.cdimascio.dotenv.Dotenv;
+import ui.AppViewInterface;
 
 public class AppViewImpl implements AppViewInterface {
     Dotenv env = Dotenv.configure().load();

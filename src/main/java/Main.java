@@ -1,4 +1,4 @@
-import ui.AppViewImpl;
+import ui.impl.AppViewImpl;
 
 public class Main {
     public static void main(String[] args){
