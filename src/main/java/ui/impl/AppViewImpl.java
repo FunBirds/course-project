@@ -28,7 +28,7 @@ public class AppViewImpl implements AppViewInterface {
         System.out.println("/all - Display all products");
         System.out.println("/plist - List of Parameters");
         System.out.println("/tlist - List of Tablewares");
-        System.out.println("/search -t=[TABLEWARE NAME] -p=[PARAMETER] - Search by a parameter");
+        System.out.println("/search -t=[TABLEWARE NAME] -p=[PARAMETER] -a=[PARAMETER ARGUMENT] - Search by a parameter");
         System.out.println("/search -t=[TABLEWARE NAME] -n=[NAME] - Search by a name");
         System.out.println("/purchasable -t=[TABLEWARE NAME] -a=[COST] - Display all purchasable products");
         System.out.println("/exit - Exit the application and quit");
