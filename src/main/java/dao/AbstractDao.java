@@ -42,7 +42,7 @@ public abstract class AbstractDao<A extends Tableware<A>> implements TablewareDa
             }
             return appliances;
         } catch (IOException e) {
-            throw new DaoException(e.getMessage());
+            throw new DaoException("Something went wrong while finding" + e.getMessage());
         }
     }
 
