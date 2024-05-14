@@ -19,9 +19,9 @@ public class PotServiceImpl implements PotService {
     TablewareDao<Pot> dao = DaoFactory.INSTANCE.getTablewareDAO(Pot.class);
     PotSearchCriteria criteria = new PotSearchCriteria();
 
-    public List<Spoon> getAll() throws ServiceException {
+    public List<Pot> getAll() throws ServiceException {
         try {
-            TablewareDao<Spoon> dao = DaoFactory.INSTANCE.getTablewareDAO(Spoon.class);
+            TablewareDao<Pot> dao = DaoFactory.INSTANCE.getTablewareDAO(Pot.class);
             return Objects.requireNonNull(dao).findAll();
         } catch (Exception e) {
             throw new ServiceException("Error while getting all products" + e.getMessage());
@@ -69,7 +69,6 @@ public class PotServiceImpl implements PotService {
      */
     @Override
     public List getProductByParameter(Parameter parameter) throws ServiceException {
-        getAll();
         try {
             criteria.addParameter(parameter);
             return dao.find(criteria);

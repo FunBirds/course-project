@@ -4,7 +4,7 @@ import dao.criteria.Parameter;
 import service.ServiceException;
 import service.impl.PlateServiceImpl;
 
-public class PlateService implements Controller {
+public class PlateController implements Controller {
     PlateServiceImpl plateService = new PlateServiceImpl();
 
 
@@ -40,7 +40,8 @@ public class PlateService implements Controller {
     @Override
     public void getProductByParameter(Parameter parameter) throws ControllerException {
         try {
-            plateService.getProductByParameter(parameter).forEach(System.out::println);
+            System.out.println(plateService.getProductByParameter(parameter));
+//            plateService.getProductByParameter(parameter).forEach(System.out::println);
         } catch (ServiceException e) {
             throw new ControllerException("Something went wrong while getting product by parameter " + e.getMessage());
         }
