@@ -23,7 +23,7 @@ public class Spoon extends Tableware<Spoon>{
     }
     @Override
     public String toString() {
-        return "Cup{" + String.join(", ", commonField(), "type=" + type, "color=" + color) + "}";
+        return "Spoon {" + String.join(", ", commonField(), "type=" + type, "color=" + color) + "}";
     }
 
     @Override

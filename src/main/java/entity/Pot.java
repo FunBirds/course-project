@@ -23,7 +23,7 @@ public class Pot extends Tableware<Pot>{
     }
     @Override
     public String toString() {
-        return "Cup{" + String.join(", ", commonField(), "type=" + type, "color=" + color) + "}";
+        return "Pot {" + String.join(", ", commonField(), "type=" + type, "color=" + color) + "}";
     }
 
     @Override

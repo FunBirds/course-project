@@ -21,7 +21,7 @@ public class Plate extends Tableware<Plate> {
     }
     @Override
     public String toString() {
-        return "Cup{" + String.join(", ", commonField(), "shape=" + shape, "color=" + color) + "}";
+        return "Plate {" + String.join(", ", commonField(), "shape=" + shape, "color=" + color) + "}";
     }
 
     @Override
