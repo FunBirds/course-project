@@ -20,6 +20,8 @@ public class SpoonServiceImpl implements SpoonService {
     public List<Spoon> getAll() throws ServiceException {
         try {
             TablewareDao<Spoon> dao = DaoFactory.INSTANCE.getTablewareDAO(Spoon.class);
+            assert dao != null;
+            this.spoons = dao.findAll();
             return Objects.requireNonNull(dao).findAll();
         } catch (Exception e) {
             throw new ServiceException("Error while getting all products" + e.getMessage());

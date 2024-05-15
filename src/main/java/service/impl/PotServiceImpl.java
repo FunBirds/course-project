@@ -22,6 +22,8 @@ public class PotServiceImpl implements PotService {
     public List<Pot> getAll() throws ServiceException {
         try {
             TablewareDao<Pot> dao = DaoFactory.INSTANCE.getTablewareDAO(Pot.class);
+            assert dao != null;
+            this.pots = dao.findAll();
             return Objects.requireNonNull(dao).findAll();
         } catch (Exception e) {
             throw new ServiceException("Error while getting all products" + e.getMessage());

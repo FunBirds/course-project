@@ -21,6 +21,8 @@ public class PlateServiceImpl implements PlateService {
     public List<Plate> getAll() throws ServiceException {
         try {
             TablewareDao<Plate> dao = DaoFactory.INSTANCE.getTablewareDAO(Plate.class);
+            assert dao != null;
+            this.plate = dao.findAll();
             return Objects.requireNonNull(dao).findAll();
         } catch (Exception e) {
             throw new ServiceException("Error while getting all products" + e.getMessage());

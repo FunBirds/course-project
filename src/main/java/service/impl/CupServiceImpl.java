@@ -26,6 +26,8 @@ public class CupServiceImpl implements CupService {
     public List<Cup> getAll() throws ServiceException {
         try {
             TablewareDao<Cup> dao = DaoFactory.INSTANCE.getTablewareDAO(Cup.class);
+            assert dao != null;
+            this.cups = dao.findAll();
             return Objects.requireNonNull(dao).findAll();
         } catch (Exception e) {
             throw new ServiceException("Error while getting all cups" + e.getMessage());
