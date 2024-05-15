@@ -14,7 +14,7 @@ import ui.impl.AppViewImpl;
 import java.util.Map;
 import java.util.Scanner;
 
-public class UI extends Constant{
+public class UI extends Constant {
     @SneakyThrows
     public void start() {
         AppViewImpl appView = new AppViewImpl();
@@ -31,18 +31,9 @@ public class UI extends Constant{
         PotController potController = new PotController();
         SpoonController spoonController = new SpoonController();
 
-        //**********************************************//
-        //**********  debugging are  ************//
-
-
-
-        //**********  debugging are  ************//
-        //*********************************************//
-
         // Listen CMD for commands
         while (true){
             String input = scanner.nextLine();
-            System.out.println("{DEBUG: From 60 line}. Input: " + input);
             String command = input.toLowerCase().trim();
             // common commands
             if (command.equals("/exit")){
@@ -133,7 +124,7 @@ public class UI extends Constant{
                     }
                 }
                 else {
-                    System.out.println("Invalid command! Please enter a valid command. See /help for more info. {DEBUG: From 163 line}");
+                    System.out.println("Invalid command! Please enter a valid command. See /help for more info");
                 }
             }
             if(command.contains("/all")){
@@ -172,12 +163,22 @@ public class UI extends Constant{
                     System.out.println("Invalid command! Please enter a valid command. See /help for more info.");
                 }
             }
-
-
-
-
-
-
+            if(command.contains("/purchasable")){
+                output = commandController.searchCommand(command);
+                if (output.containsKey("-t") && output.containsKey("-a")) {
+                    String tableware = output.get("-t");
+                    String cost = output.get("-a");
+                    switch (tableware) {
+                        case "cup" -> cupController.getPurchasableProducts(Integer.parseInt(cost));
+                        case "plate" -> plateController.getPurchasableProducts(Integer.parseInt(cost));
+                        case "pot" -> potController.getPurchasableProducts(Integer.parseInt(cost));
+                        case "spoon" -> spoonController.getPurchasableProducts(Integer.parseInt(cost));
+                        default -> System.out.println("OOPS, seems you have entered an invalid tableware name! See /help for more info.");
+                    }
+                } else {
+                    System.out.println("Invalid command! Please enter a valid command. See /help for more info.");
+                }
+            }
 
 
 
