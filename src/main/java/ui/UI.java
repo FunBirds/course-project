@@ -18,7 +18,7 @@ public class UI extends Constant {
     @SneakyThrows
     public void start() {
         AppViewImpl appView = new AppViewImpl();
-
+        appView.launchAnimation();
         Map<String, String> output;
         CommandController commandController = new CommandController();
 

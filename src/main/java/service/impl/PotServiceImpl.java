@@ -6,7 +6,6 @@ import dao.criteria.Parameter;
 import dao.criteria.pot.PotSearchCriteria;
 import dao.criteria.parameter.NameParameter;
 import entity.Pot;
-import entity.Spoon;
 import service.ServiceException;
 import service.PotService;
 
