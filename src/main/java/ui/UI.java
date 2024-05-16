@@ -48,8 +48,6 @@ public class UI extends Constant {
             }
             if(command.contains("/search")){
                 output = commandController.searchCommand(command);
-                System.out.println(output);
-                System.out.println(command);
                 if (output.containsKey("-t") && output.containsKey("-p") && output.containsKey("-a")) {
                     String tableware = output.get("-t").trim();
                     String parameter = output.get("-p").trim();
