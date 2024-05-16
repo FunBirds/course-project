@@ -4,13 +4,19 @@ import dao.criteria.Parameter;
 import service.ServiceException;
 import service.impl.CupServiceImpl;
 
+/**
+ * The CupController class implements the Controller interface and provides the functionality for managing cups.
+ * It uses the CupServiceImpl class to interact with the service layer of the application.
+ * Each method can throw a ControllerException if something goes wrong during its execution.
+ */
 public class CupController implements Controller {
+    // The service used to interact with the cups
     CupServiceImpl cupService = new CupServiceImpl();
 
     /**
-     * getAll() - is the function which is responsible for getting all products
-     *
-     * @throws ControllerException - if error occurs while getting all products
+     * The getAll method retrieves all cups.
+     * It uses the CupServiceImpl to get all cups and then prints them.
+     * @throws ControllerException If an error occurs during the operation
      */
     @Override
     public void getAll() throws ControllerException {
@@ -22,8 +28,10 @@ public class CupController implements Controller {
     }
 
     /**
-     * @param name - name of the product
-     * @throws ControllerException - if error occurs while getting product by name
+     * The getProductByName method retrieves a cup by its name.
+     * It uses the CupServiceImpl to get the cup and then prints it.
+     * @param name The name of the cup to retrieve
+     * @throws ControllerException If an error occurs during the operation
      */
     @Override
     public void getProductByName(String name) throws ControllerException {
@@ -35,8 +43,10 @@ public class CupController implements Controller {
     }
 
     /**
-     * @param parameter - parameter of the product
-     * @throws ControllerException - if error occurs while getting product by parameter
+     * The getProductByParameter method retrieves a cup by a given parameter.
+     * It uses the CupServiceImpl to get the cup and then prints it.
+     * @param parameter The parameter to use when retrieving the cup
+     * @throws ControllerException If an error occurs during the operation
      */
     @Override
     public void getProductByParameter(Parameter parameter) throws ControllerException {
@@ -48,8 +58,10 @@ public class CupController implements Controller {
     }
 
     /**
-     * @param price - price of the product
-     * @throws ControllerException - if error occurs while getting purchasable products
+     * The getPurchasableProducts method retrieves all cups that can be purchased within a certain price range.
+     * It uses the CupServiceImpl to get the cups and then prints them.
+     * @param price The maximum price of the cups to retrieve
+     * @throws ControllerException If an error occurs during the operation
      */
     @Override
     public void getPurchasableProducts(int price) throws ControllerException {
