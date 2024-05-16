@@ -35,7 +35,6 @@ public class UI extends Constant {
         while (true){
             String input = scanner.nextLine();
             String command = input.toLowerCase().trim();
-            // common commands
             if (command.equals("/exit")){
                 appView.endMessage("Goodbye! Have a nice day!");
                 break;
@@ -177,13 +176,10 @@ public class UI extends Constant {
                     System.out.println("Invalid command! Please enter a valid command. See /help for more info.");
                 }
             }
-
-
-
-            // should work at the end
             if (!command.isEmpty()){
                 System.out.println("Enter next command: ");
-            } else {
+            }
+            else {
                 System.out.println("Time never comes back! Don't waste it! Enter a command: ");
             }
         }
