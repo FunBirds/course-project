@@ -2,16 +2,31 @@ package dao;
 
 import entity.Spoon;
 
+/**
+ * This class represents a Data Access Object (DAO) for Spoon.
+ * It extends the AbstractDao class and provides an implementation for the parse method.
+ */
 public class SpoonDao extends AbstractDao<Spoon> {
+
+    /**
+     * Constructs a new SpoonDao.
+     * The CSV file used is "spoon.csv".
+     */
     public SpoonDao() {
         super("spoon.csv");
     }
 
+    /**
+     * Parses a CSV line into a Spoon object.
+     * The CSV line is expected to have the following format:
+     * name,price,material,quantity,type,color
+     * If an error occurs while parsing, a RuntimeException is thrown.
+     * @param product The CSV line to parse.
+     * @return The parsed Spoon object.
+     * @throws RuntimeException If an error occurs while parsing the CSV line.
+     */
     @Override
     protected Spoon parse(String[] product) {
-        if (product.length < 6) {
-            throw new RuntimeException("[SPOON] Product array does not have enough elements. Expected at least 6 elements, but got " + product.length);
-        }
         try {
             return new Spoon()
                     .setName(product[0])

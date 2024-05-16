@@ -12,9 +12,19 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This abstract class represents a Data Access Object (DAO) for Tableware.
+ * It provides methods to find Tableware based on certain criteria and to find all Tableware.
+ * It also defines an abstract method to parse a CSV line into a Tableware object.
+ */
 public abstract class AbstractDao<A extends Tableware<A>> implements TablewareDao<A> {
     private final Path csvPath;
 
+    /**
+     * Constructs a new AbstractDao with the specified CSV file path.
+     * @param path The path to the CSV file.
+     * @throws IllegalArgumentException If the CSV file is not found.
+     */
     protected AbstractDao(String path) {
         try {
             URL resource = getClass().getClassLoader().getResource(path);
@@ -27,6 +37,12 @@ public abstract class AbstractDao<A extends Tableware<A>> implements TablewareDa
         }
     }
 
+    /**
+     * Finds and returns a list of Tableware that match the specified criteria.
+     * @param criteria The criteria to match.
+     * @return A list of Tableware that match the criteria.
+     * @throws DaoException If an error occurs while finding the Tableware.
+     */
     @Override
     public List<A> find(SearchCriteria<A> criteria) throws DaoException {
         try (BufferedReader in = Files.newBufferedReader(csvPath)){
@@ -46,6 +62,11 @@ public abstract class AbstractDao<A extends Tableware<A>> implements TablewareDa
         }
     }
 
+    /**
+     * Finds and returns a list of all Tableware.
+     * @return A list of all Tableware.
+     * @throws DaoException If an error occurs while finding the Tableware.
+     */
     @Override
     public List<A> findAll() throws DaoException {
         try (BufferedReader in = Files.newBufferedReader(csvPath)){
@@ -63,5 +84,12 @@ public abstract class AbstractDao<A extends Tableware<A>> implements TablewareDa
         }
     }
 
+    /**
+     * Parses a CSV line into a Tableware object.
+     * This method is abstract and must be implemented by subclasses.
+     * @param csvLine The CSV line to parse.
+     * @return The parsed Tableware object.
+     * @throws DaoException If an error occurs while parsing the CSV line.
+     */
     protected abstract A parse(String[] csvLine) throws DaoException;
 }
