@@ -1,6 +1,6 @@
 package ui;
 
-import controllers.*;
+import controller.*;
 import entity.*;
 import dao.criteria.parameter.MaterialParameter;
 import dao.criteria.parameter.cupParameters.ColorParameter;
@@ -180,7 +180,7 @@ public class UI extends Constant {
                 System.out.println("Enter next command: ");
             }
             else {
-                System.out.println("Time never comes back! Don't waste it! Enter a command: ");
+                System.out.println("Time is relative, it can stretch, squeeze but it can't run backwards. That's why don't waste it. Enter the command: ");
             }
         }
     }

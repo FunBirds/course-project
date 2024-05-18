@@ -1,4 +1,4 @@
-package controllers;
+package controller;
 
 public class ControllerConstants {
     public final static String WRONG_COMMAND = "The command is not found";
