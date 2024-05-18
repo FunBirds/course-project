@@ -1,10 +1,10 @@
 Name,Price,Material,Quantity,Color,Size,Volume
-Classic Mug,5.99,Ceramic,100,White,Standard,12
-Stainless Steel Travel Mug,12.99,Stainless Steel,50,Silver,Standard,16
-Glass Tea Cup,7.49,Glass,75,Clear,Standard,8
-Porcelain Coffee Mug,6.99,Porcelain,80,Blue,Standard,10
-Insulated Tumbler,9.99,Plastic,60,Black,Standard,20
-Handcrafted Clay Cup,14.99,Clay,40,Brown,Standard,12
-Bamboo Fiber Cup,8.49,Bamboo Fiber,70,Green,Standard,14
-Vintage Enamel Mug,10.99,Enamel,55,Red,Standard,10
-Double-Walled Espresso Cup,11.49,Ceramic,45,Black,Small,4
+ClassicMug,5.99,Ceramic,100,White,Standard,12
+StainlessSteel Travel Mug,12.99,Stainless Steel,50,Silver,Standard,16
+GlassTeaCup,7.49,Glass,75,Clear,Standard,8
+PorcelainCoffee Mug,6.99,Porcelain,80,Blue,Standard,10
+InsulatedTumbler,9.99,Plastic,60,Black,Standard,20
+HandcraftedClay Cup,14.99,Clay,40,Brown,Standard,12
+BambooFiberCup,8.49,Bamboo Fiber,70,Green,Standard,14
+VintageEnamelMug,10.99,Enamel,55,Red,Standard,10
+Double-WalledEspressoCup,11.49,Ceramic,45,Black,Small,4

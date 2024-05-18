@@ -1,11 +1,11 @@
 Name,Price,Material,Quantity,Type,Color
-Stainless Steel Teaspoon,1.99,Stainless Steel,200,Teaspoon,Silver
-Wooden Cooking Spoon,3.49,Wood,150,Cooking Spoon,Brown
-Plastic Dessert Spoon,0.99,Plastic,300,Dessert Spoon,White
-Silver Plated Soup Spoon,6.99,Silver Plated,100,Soup Spoon,Silver
-Bamboo Mixing Spoon,2.99,Bamboo,180,Mixing Spoon,Beige
-Ceramic Coffee Spoon,4.49,Ceramic,120,Coffee Spoon,Blue
-Melamine Serving Spoon,2.49,Melamine,250,Serving Spoon,Black
-Porcelain Demitasse Spoon,5.99,Porcelain,80,Demitasse Spoon,White
-Vintage Silver Spoon,8.99,Silver,90,Tablespoon,Silver
-Aluminum Ice Cream Spoon,1.79,Aluminum,220,Ice Cream Spoon,Assorted
+StainlessSteelTeaspoon,1.99,Stainless Steel,200,Teaspoon,Silver
+WoodenCookingSpoon,3.49,Wood,150,Cooking Spoon,Brown
+PlasticDessertSpoon,0.99,Plastic,300,Dessert Spoon,White
+SilverPlatedSoupSpoon,6.99,Silver Plated,100,Soup Spoon,Silver
+BambooMixingSpoon,2.99,Bamboo,180,Mixing Spoon,Beige
+CeramicCoffeeSpoon,4.49,Ceramic,120,Coffee Spoon,Blue
+MelamineServingSpoon,2.49,Melamine,250,Serving Spoon,Black
+PorcelainDemitasseSpoon,5.99,Porcelain,80,Demitasse Spoon,White
+VintageSilverSpoon,8.99,Silver,90,Tablespoon,Silver
+AluminumIceCreamSpoon,1.79,Aluminum,220,Ice Cream Spoon,Assorted
