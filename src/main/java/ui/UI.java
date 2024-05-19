@@ -43,7 +43,7 @@ public class UI extends Constant {
                 appView.displayMenu();
             }
             if(command.equals("/tlist")){
-                System.out.println("List of Tablewares: " + getGeneralParameter());
+                System.out.println("List of Tablewares: " + getTablewares());
             }
             if(command.contains("/search")){
                 output = commandController.searchCommand(command);
